@@ -150,7 +150,7 @@ An important concept related to the train and test MSE is \textbf{variability}, 
 
 For example, if you were trying to predict house prices based on features like the number of bedrooms, location, and age of the house, a simple model might just give you a rough average price based on the number of bedrooms. While it may not be perfect, it would be relatively stable. In contrast, a very flexible model might try to fit every single fluctuation in price, even if those fluctuations are random or due to factors you haven’t measured. This model would perform extremely well on the training data but poorly on the test data because it would struggle with new, unseen examples that don't fit the training patterns precisely.
 
-\section{Bias-Variance Trade Off}
+\subsection{Bias-Variance Trade Off}
 
 Understanding the sources of error is critical for building models that generalize well to new data. One of the key concepts in this regard is the \textbf{bias-variance tradeoff}. It explains the balance between two sources of error that affect the performance of a model: \textbf{bias} and \textbf{variance}. These components together, along with irreducible error, make up the total prediction error. We express this relationship with the following equation:
 
@@ -186,10 +186,3 @@ The term \( \text{Var}(\hat{f}(x_0)) \) in the equation represents this variabil
 As we increase model flexibility, bias typically decreases because the model becomes capable of fitting more complex patterns. However, variance increases as the model starts capturing more noise from the training data. The goal is to find the \textbf{sweet spot} where the model is sufficiently complex to capture the underlying structure but not so flexible that it fits the noise. This is the point where the sum of bias and variance is minimized.\\
 
 The term \( \text{Var}(\epsilon) \) in the equation represents the irreducible error or noise inherent in the system. No matter how well a model is designed, this error cannot be eliminated because it arises from factors beyond our control or measurement error in the observations.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{chapters/chapter1/plots/scatter_plot.png}
-    \caption{Scatter Plot of CGPA vs Salary Package}
-    \label{fig:scatter_plot}
-\end{figure}
